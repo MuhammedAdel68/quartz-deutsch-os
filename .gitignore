@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+public/
+.quartz/
+quartz/.quartz-cache/
+.cache/
+*.cache
+
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Obsidian local config (contains private keys)
+content/
+content/.obsidian/
+content/.claude/
+content/.mcp.json
+
+# IDE and tools
+.vscode/
+.smart-env/
+.ultimate-index.json
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local model and downloaded asset stores
+models/
+downloads/
+*.onnx
+*.safetensors

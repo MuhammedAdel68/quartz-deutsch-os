@@ -1,0 +1,104 @@
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+
+// --- Premium Quartz Aesthetic Overhaul ---
+
+// 1. Global Background & Glassmorphism
+body {
+  background-image:
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 40%);
+  background-attachment: fixed;
+}
+
+// 2. Premium Link Hover Effects
+a.internal {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: var(--tertiary);
+    border-bottom: 1px solid var(--tertiary);
+    text-shadow: 0 0 8px var(--highlight);
+  }
+}
+
+// 3. Floating Interactive Cards (For explorer / pages)
+.explorer ul li {
+  transition: all 0.2s ease;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: var(--highlight);
+    transform: translateX(4px);
+  }
+}
+
+// 4. Beautiful Blockquotes
+blockquote {
+  border-left: 4px solid var(--secondary);
+  background: var(--highlight);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+
+  &::before {
+    content: "❝";
+    color: var(--secondary);
+    font-size: 1.5em;
+    opacity: 0.5;
+    margin-right: 0.5rem;
+  }
+}
+
+// 5. Code Blocks with Mac-style window buttons
+pre {
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: var(--light) !important;
+  position: relative;
+  padding-top: 2.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow:
+      20px 0 0 #ffbd2e,
+      40px 0 0 #27c93f;
+  }
+}
+
+// 6. Smooth Callouts
+.callout {
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// 7. Page Title Gradient Text
+h1.page-title a {
+  background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
